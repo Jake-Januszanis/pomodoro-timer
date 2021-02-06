@@ -6,19 +6,16 @@ const display = document.querySelector(".timer")
 const buttons = document.querySelectorAll(".buttons");
 const totalCount = document.querySelector(".total-count");
 let count = 0;
-// totalCount.innerHTML = count;
  
-
-
 
 buttons.forEach((button) => {
     button.addEventListener('click', function() {
-        button.value === 1500 ? workTimer(button.value) : breakTimer(button.value);
+        button.name === 'work' ? workTimer(button.value) : breakTimer(button.value);
     })
 })
 
 reset.addEventListener("click", function() {
-    display.innerHTML = "00:00";
+    display.innerHTML = "0:00";
     clearInterval(countdown);
 })
 
@@ -39,11 +36,11 @@ function workTimer(seconds) {
                 if (secondsLeft <= 0) {
                     clearInterval(countdown);
                     updateCount();
-                    display.innerHTML="Timer Complete"
+                    display.innerHTML="0:00"
                 } else {
                     timerDisplay(secondsLeft);
                 }
-            }, 500)
+            }, 100)
 }
 
 function breakTimer(seconds) {
@@ -57,8 +54,7 @@ function breakTimer(seconds) {
                 const secondsLeft = ((end - Date.now()) / 1000);
                 if (secondsLeft <= 0) {
                     clearInterval(countdown);
-                    updateCount();
-                    display.innerHTML="Timer Complete"
+                    display.innerHTML="0:00"
                     
                 } else {
                     timerDisplay(secondsLeft);
