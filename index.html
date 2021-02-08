@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="timer.css">
     <link rel="stylesheet" href="reset.css">
-    <title>Document</title>
+    <title>Pomo Timer</title>
 </head>
 <body>
  
-
+    <div class="timer-container">
         <h1 class="timer">Start Timer</h1>
-
+    </div>
         <div class="button-container">
-            <button class="buttons" name="work" value="15">25 minutes</button>
-            <button  class="buttons" name="break" value="20">5 Minutes</button>
-            <button  class="buttons" name="break" value="40">10 Minutes</button>
-            <button id ="clear">Clear</button>
+            <button class="buttons" name="work" value="5">Focus</button>
+            <button  class="buttons" name="break" value="300">Short Break</button>
+            <button  class="buttons" name="break" value="600">Long Break</button>
         </div>
-        <h2 class="total-count"></h2>
+        <button class="buttons" id="reset-btn">Reset</button>
+        <p class="total-count"></p>
+        <p class="total-count-display"></p>
+        <button class="total-count-display-btn">Display total time today</button>
 
 
 
