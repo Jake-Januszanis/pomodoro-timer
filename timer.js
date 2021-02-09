@@ -1,29 +1,45 @@
 
 
-let countdown;
 const reset = document.getElementById("reset-btn");
-const display = document.querySelector(".timer")
+const display = document.querySelector(".timer__display")
 const buttons = document.querySelectorAll(".buttons");
-const totalCount = document.querySelector(".total-count");
+const totalCount = document.querySelector(".total__icons");
 const title = document.querySelector('title');
 const body = document.querySelector('body');
-const totalCountDisplay = document.querySelector(".total-count-display");
-const totalCountBtn = document.querySelector(".total-count-display-btn");
+const totalCountDisplay = document.querySelector(".total__message");
+const totalCountBtn = document.querySelector(".total__message-btn");
 let count = 0;
+let countdown;
  
 
-buttons.forEach((button) => {
-    button.addEventListener('click', function() {
-        button.name === 'work' ? workTimer(button.value) : breakTimer(button.value);
-        if (button.value === '300') {
-            document.body.style.backgroundColor = "#40916c";
-        } else if (button.value === '600') {
-            document.body.style.backgroundColor = "#f9c74f";
-        } else {
-            document.body.style.backgroundColor = "#93c9ff";
-        }
+    // Functions for App buttons**
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', function() {
+            button.name === 'work' ? workTimer(button.value) : breakTimer(button.value);
+            if (button.value === '300') {
+                document.body.style.backgroundColor = "#40916c";
+            } else if (button.value === '600') {
+                document.body.style.backgroundColor = "#f9c74f";
+            } else {
+                document.body.style.backgroundColor = "#93c9ff";
+            }
+        })
     })
-})
+
+    totalCountBtn.addEventListener('click', function() {
+        let time = count * 25;
+        let hours = Math.floor(time / 60);
+        let minutes = time % 60;
+            if (hours === 0) {
+                totalCountDisplay.innerText = `Total time spent studying today is ${minutes} minutes`
+            } else if (hours === 1) {
+                totalCountDisplay.innerText = `Total time spent studying today is ${hours} hour and ${minutes} minutes`;
+            } else {
+                totalCountDisplay.innerText = `Total time spent studying today is ${hours} hours and ${minutes} minutes`;
+            }
+    });
+
 
 reset.addEventListener("click", function() {
     display.innerHTML = "0:00";
@@ -38,21 +54,12 @@ function updateCount() {
     }
 }
 
-totalCountBtn.addEventListener('click', function() {
-    let time = count * 25;
-    let hours = Math.floor(time / 60);
-    let minutes = time % 60;
-    totalCountDisplay.innerText = `Total time spent studying today is ${hours} hours and ${minutes} minutes`;
-});
 
-function displayTotalTime() {
-    let time = count * 25;
-    totalCountDisplay.innerText = time;
-}
+    //Timer functions both work and break 
 
-function workTimer(seconds) {
-    clearInterval(countdown); 
-    timerDisplay(seconds);
+    function workTimer(seconds) {
+        clearInterval(countdown); 
+        timerDisplay(seconds);
     
         const start = Date.now()
         const end = start + (seconds * 1000)
@@ -69,9 +76,9 @@ function workTimer(seconds) {
             }, 100)
 }
 
-function breakTimer(seconds) {
-    clearInterval(countdown); 
-    timerDisplay(seconds);
+    function breakTimer(seconds) {
+        clearInterval(countdown); 
+        timerDisplay(seconds);
     
         const start = Date.now()
         const end = start + (seconds * 1000)

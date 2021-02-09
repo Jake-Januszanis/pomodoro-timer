@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="timer.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="reset.css">
     <title>Pomo Timer</title>
 </head>
 <body>
  
-    <div class="timer-container">
-        <h1 class="timer">Start Timer</h1>
+    <div class="timer">
+        <h1 class="timer__display">Start Timer</h1>
     </div>
+
         <div class="button-container">
             <button class="buttons" name="work" value="5">Focus</button>
             <button  class="buttons" name="break" value="300">Short Break</button>
             <button  class="buttons" name="break" value="600">Long Break</button>
         </div>
-        <button class="buttons" id="reset-btn">Reset</button>
-        <p class="total-count"></p>
-        <p class="total-count-display"></p>
-        <button class="total-count-display-btn">Display total time today</button>
+            <button class="buttons" id="reset-btn">Reset</button>
 
-
+        <div class="total">
+        <p class="total__icons"></p>
+        <p class="total__message"></p>
+        <button class="total__message-btn">Display total time today</button>
+        </div>
 
     <script src="timer.js"></script>
 </body>
