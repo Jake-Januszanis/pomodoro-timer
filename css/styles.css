@@ -47,18 +47,28 @@ body {
   margin: 0 auto;
   margin-top: 2rem; }
 
-.total__icons {
-  font-size: 14rem;
-  text-align: center;
+.total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   color: #fbfbfb; }
-
-.total__message {
-  text-align: center;
-  font-size: 3rem;
-  margin-top: 2rem; }
-  .total__message-btn {
+  .total__icons {
+    font-size: 14rem;
     text-align: center;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    line-height: 5rem;
+    margin-top: 5rem; }
+  .total__message {
+    text-align: center;
+    font-size: 3rem; }
+    .total__message-btn {
+      text-align: center;
+      width: 10%;
+      margin: 2rem auto;
+      color: #fbfbfb;
+      background-color: transparent;
+      height: 5rem;
+      border-radius: 10px;
+      border: #fbfbfb solid 2px;
+      outline: none;
+      cursor: pointer; }

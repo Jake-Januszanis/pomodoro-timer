@@ -1,4 +1,4 @@
-
+@import 'variables.scss';
 body {
     background-color: #93c9ff;
 }
@@ -59,25 +59,36 @@ body {
 }
 
 .total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    color: $white-text;
 
     &__icons {
         font-size: 14rem;
         text-align: center;
-        color: $white-text;
+        line-height: 5rem;
+        margin-top: 5rem;
     }
 
     &__message {
         text-align: center;
         font-size: 3rem;
-        margin-top: 2rem;
-        color: $white-text;
 
         &-btn {
             text-align: center;
-            position: absolute;
-            top: 60%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            width: 10%;
+            margin: 2rem auto;
+            color: $white-text;
+            background-color: transparent;
+            height: 5rem;
+            border-radius: 10px;
+            border: #fbfbfb solid 2px;
+            outline: none;
+            cursor: pointer;
         }
+
     }
 }
+
