@@ -32,12 +32,16 @@ let countdown;
         let hours = Math.floor(time / 60);
         let minutes = time % 60;
             if (hours === 0) {
-                totalCountDisplay.innerText = `Total time spent studying today is ${minutes} minutes`
+                totalCountDisplay.innerText = `Today's session: ${minutes} minutes`
             } else if (hours === 1) {
-                totalCountDisplay.innerText = `Total time spent studying today is ${hours} hour and ${minutes} minutes`;
+                totalCountDisplay.innerText = `Today's session: ${hours} hour and ${minutes} minutes`;
             } else {
-                totalCountDisplay.innerText = `Total time spent studying today is ${hours} hours and ${minutes} minutes`;
+                totalCountDisplay.innerText = `Today's session: ${hours} hours and ${minutes} minutes`;
             }
+
+         setTimeout(function() {
+             totalCountDisplay.innerText = ""
+         }, 4000)   
     });
 
 
