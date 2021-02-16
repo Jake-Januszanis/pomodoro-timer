@@ -2,47 +2,32 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const bcrypt = require('bcrypt');
-const port = 4000;
-
-const users = [];
+const mongoose = require('mongoose')
+const dotenv = require('dotenv');
+dotenv.config();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
+app.use(express.json());
+
+//Connect to DB
+mongoose.connect(process.env.DB_CONNECT,
+    {useNewUrlParser: true,
+    useUnifiedTopology: true},
+    () => console.log('Connected to Database'));
+
+
+//Routes
+const registerRoute = require("./routes/register");
+const loginRoute = require('./routes/login')
+app.use("/register", registerRoute);
+app.use('/login', loginRoute);
+
 
 app.get("/", (req, res) => {
     res.sendFile("index.html")
 })
 
-app.post("/registerForm", async  (req, res) => {
-    try {
-    const salt = await bcrypt.genSalt();
-    const hash = await bcrypt.hash(req.body.password, salt);
-    users.push({ username: req.body.username, password: hash});
-    res.redirect("/");
-    } catch {
-        console.error();
-    }
-    console.log(users)
-})
-
-app.post("/loginForm", async (req, res) => {
-    const user = users.find(user => user.username === req.body.username)
-    if (user === null) {
-        res.send("User not found");
-    } try {
-        if (await bcrypt.compare(req.body.password, user.password)) {
-        console.log("Password Found")
-        res.redirect("/")
-        } else {
-            res.send("Password not found")
-        }
-    } catch {
-        res.send("There is an error");
-    }
-})
-
-
-app.listen(port, () => {
+app.listen(4000, () => {
     console.log('App is listening on port 4000')
 })
