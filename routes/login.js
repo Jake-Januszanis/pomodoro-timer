@@ -2,7 +2,7 @@ const router = require('express').Router();
 const User = require("../models/users");
 const {loginValidation} = require("../validation");
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+const session = require('client-sessions');
 
 router.post('/', async (req, res) => {
 
@@ -18,14 +18,13 @@ router.post('/', async (req, res) => {
     const verifyPassword = await bcrypt.compare(req.body.password, verifyUser.password);
     if (!verifyPassword) return res.status(400).send("Invalid Password")
 
-    //If username and password are correct then assign web token
-
-    try{
-        res.send("Log in Succesful");
-    } catch(error) {
-        res.send(error)
+    //If username and password are correct then assign session
+    try {
+        req.session.user = verifyUser;
+        res.redirect('/user/dashboard');
+    } catch(err) {
+        res.status(401).send(err.message);
     }
 })
-
 module.exports = router;
 

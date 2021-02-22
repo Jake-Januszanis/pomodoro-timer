@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomo Timer Dashboard</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar__list">
+            <a class="navbar__list-item" href="/">Logout</a>
+        </ul>
+    </nav>
+    <div class="timer">
+        <h1 class="timer__display">Start Timer</h1>
+    </div>
+
+        <div class="button-container">
+            <button class="buttons" name="work" value="5">Focus</button>
+            <button  class="buttons" name="break" value="300">Short Break</button>
+            <button  class="buttons" name="break" value="600">Long Break</button>
+        </div>
+            <button class="buttons" id="reset-btn">Reset</button>
+
+        <div class="total">
+        <p class="total__icons"></p>
+        <p class="total__message"></p>
+        <button class="total__message-btn">Current Study Time</button>
+        </div>
+
+        <h1>User dashboard page!</h1>
+    <h2><%= user.username %></h2>
+    <h3><%= user.lastLogin %></h3>
+
+    <script src="../public/js/timer.js" type="text/javascript"></script>
+</body>
+</html>
