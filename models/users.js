@@ -1,11 +1,16 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
+
 const userSchema = new Schema({
     name: String,
     username: String,
     password: String,
-    lastLogin: Date
+    lastLogin: Date,
+    studyTime:[{
+        date: Date,
+        time: Number
+    }]
 });
 
 

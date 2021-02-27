@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
 
     //Validate the data being sent
     const {error} = registerValidation(req.body);
-    if(error) return res.status(400).send(error.details[0].message);
+    if (error) return res.status(400).send(error.details[0].message);
 
     //Check to see if username already exists
     const verifyUsername = await User.findOne({ username: req.body.username });
@@ -21,7 +21,11 @@ router.post('/', async (req, res) => {
     const user = new User({
         name: req.body.name,
         username: req.body.username,
-        password: hashedPassword
+        password: hashedPassword,
+        studyTime: [{
+            date: new Date(),
+            time: 0
+        }]
     })
 
     try {

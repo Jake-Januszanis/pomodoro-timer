@@ -47,9 +47,6 @@ app.get('/register', (req, res) => {
     res.render('register')
 })
 
-app.get('/user/dashboard', (req, res) => {
-    res.render('dashboard')
-})
 
 app.listen(4000, () => {
     console.log('App is listening on port 4000')

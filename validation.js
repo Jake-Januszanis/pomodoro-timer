@@ -9,7 +9,6 @@ const registerValidation = (data) => {
     return verify.validate(data);
 }
 
-
 const loginValidation = (data) => {
     const verify = Joi.object({
         username: Joi.string().min(6).required(),

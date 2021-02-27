@@ -134,3 +134,10 @@ body {
     font-size: 3rem;
     color: #fbfbfb;
     border: 1px transparent solid; }
+
+.data-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 50%;
+  text-align: center; }
