@@ -12,7 +12,6 @@
         <ul class="navbar__list">
             <a class="navbar__list-item" href="/">Logout</a>
             <a class="navbar__list-item" id="save-btn" href="#">Save</a>
-            <!-- <button type="submit" class="save-btn">Save Results</button> -->
         </ul>
     </nav>
  
@@ -21,7 +20,7 @@
     </div>
 
         <div class="button-container">
-            <button class="buttons" name="work" value="5">Focus</button>
+            <button class="buttons" name="work" value="1500">Focus</button>
             <button  class="buttons" name="break" value="300">Short Break</button>
             <button  class="buttons" name="break" value="600">Long Break</button>
         </div>
@@ -33,7 +32,6 @@
         <button class="total__message-btn">Current Study Time</button>
         </div>
 
-       
         <div class="data-display">
             
             <% user.studyTime.slice((user.studyTime.length - 7), user.studyTime.length).forEach(day => { %>
@@ -44,11 +42,7 @@
             <%   }); %>
         </div>
         
-
-    
-    
-
-    <script src="/js/timer.js"></script>
+    <script src="../js/timer.js"></script>
 </body>
 </html>
 

@@ -6,16 +6,16 @@ const session = require('client-sessions')
 const mongoose = require('mongoose')
 require('dotenv').config();
 
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
     cookieName: 'session',
     secret: process.env.SECRET,
-    duration: 30 * 60 * 100,
+    duration: 4 * 60 * 60 * 1000,
     activeDuration: 5 * 60 * 1000
 }));
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'));
-app.use(express.json());
 
 //Connect to DB
 const db = mongoose.connect(process.env.DB_CONNECT,
