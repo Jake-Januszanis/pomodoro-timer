@@ -7,7 +7,7 @@ const title = document.querySelector('title');
 const body = document.querySelector('body');
 const totalCountDisplay = document.querySelector(".total__message");
 const totalCountBtn = document.querySelector(".total__message-btn");
-const saveBtn = document.querySelector(".save-btn");
+const saveBtn = document.querySelector("#save-btn");
 let count = 0;
 let countdown;
  
@@ -17,7 +17,7 @@ let countdown;
         button.addEventListener('click', function() {
             button.name === 'work' ? workTimer(button.value) : breakTimer(button.value);
             if (button.value === '300') {
-                document.body.style.backgroundColor = "#40916c";
+                document.body.style.backgroundColor = "#48d896";
             } else if (button.value === '600') {
                 document.body.style.backgroundColor = "#f9c74f";
             } else {
@@ -74,7 +74,7 @@ function updateCount() {
 
 
 
-    //Timer functions both work and break 
+    //Timer functions for both work and breaks
 
     function workTimer(seconds) {
         clearInterval(countdown); 

@@ -11,13 +11,11 @@
     <nav class="navbar">
         <ul class="navbar__list">
             <a class="navbar__list-item" href="/">Logout</a>
+            <a class="navbar__list-item" id="save-btn" href="#">Save</a>
+            <!-- <button type="submit" class="save-btn">Save Results</button> -->
         </ul>
     </nav>
-
-
-    <button type="submit" class="save-btn">Save Results</button>
  
-
     <div class="timer">
         <h1 class="timer__display">Start Timer</h1>
     </div>
@@ -34,6 +32,18 @@
         <p class="total__message"></p>
         <button class="total__message-btn">Current Study Time</button>
         </div>
+
+       
+        <div class="data-display">
+            
+            <% user.studyTime.slice((user.studyTime.length - 7), user.studyTime.length).forEach(day => { %>
+                <div class="data__cards">
+                      <p class="data__cards-text"><span><%= day.date.getMonth() + 1%></span>/<span><%= day.date.getDate()%></span></p> 
+                      <p class="data__cards-text-sm"><span class="data__cards-text-lrg"><%= day.time %></span> minutes</p>
+                </div>
+            <%   }); %>
+        </div>
+        
 
     
     
