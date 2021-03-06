@@ -50,7 +50,7 @@ let countdown;
         clearInterval(countdown);
     })
 
-    //Save button functions
+    //Save button functions**Post request made to timer.js file
     saveBtn.addEventListener('click', function() {
         fetch("/user/dashboard", {
             headers: {
@@ -64,15 +64,17 @@ let countdown;
 
 function updateCount() {
     count++;
-    
     totalCount.innerText = ""
     for (i = 0; i < count; i++){
         totalCount.innerText += "*";
     }
-
 }
 
-
+function playAudio() {
+    let audio = new Audio("../audio/small-bell.mp3");
+    audio.load();
+    audio.play();
+}
 
     //Timer functions for both work and breaks
 
@@ -87,6 +89,7 @@ function updateCount() {
                 const secondsLeft = ((end - Date.now()) / 1000);
                 if (secondsLeft <= 0) {
                     clearInterval(countdown);
+                    playAudio();
                     updateCount();
                     display.innerHTML="0:00"
                 } else {
@@ -106,6 +109,7 @@ function updateCount() {
                 const secondsLeft = ((end - Date.now()) / 1000);
                 if (secondsLeft <= 0) {
                     clearInterval(countdown);
+                    playAudio();
                     display.innerHTML="0:00"
                     
                 } else {

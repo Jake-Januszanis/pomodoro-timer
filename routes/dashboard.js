@@ -4,6 +4,7 @@ const User = require('../models/users');
 const mongoose = require('mongoose');
 
 router.get('/', (req, res) => {
+    
     //Update last login
     User.findOneAndUpdate({username: req.session.user.username}, {lastLogin: new Date()}, {upsert: true, new: true}, function(err, result) {
         if (err) {
