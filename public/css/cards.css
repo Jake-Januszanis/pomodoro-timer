@@ -4,6 +4,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   width: 70%;
+  max-width: 80rem;
   height: 15rem;
   margin: 4rem auto 2rem auto; }
 

@@ -1,4 +1,5 @@
 
+@import 'variables.scss';
 
 body {
     background-color: #93c9ff;
@@ -21,7 +22,6 @@ body {
         color: $black;
     }
 }
-
 
 .button-container {
     width: 100%;
@@ -77,7 +77,6 @@ body {
             font-size: 2.5rem;
             width: 20%;
             max-width: 30rem;
-            height: 4rem;
             margin: .5rem auto;
             color: $black;
             background-color: transparent;
@@ -90,6 +89,7 @@ body {
 
     }
 }
+
 
 @media screen and (max-width: 1000px) {
 
@@ -110,5 +110,35 @@ body {
 
     .button-container {
         width: 100%;
+    }
+    .buttons {
+        height: 9rem;
+        width: 9rem;
+    }
+
+    .total__message-btn {
+        min-width: 20rem;
+    }
+}
+
+@media screen and (max-width: 340px) {
+
+    .timer {
+        height: 25rem;
+        width: 25rem;
+    }
+
+    .button-container {
+        width: 100%;
+    }
+
+    .buttons {
+        height: 8rem;
+        width: 8rem;
+        font-size: 2rem;
+    }
+
+    .total__message-btn {
+        width: 70%;
     }
 }

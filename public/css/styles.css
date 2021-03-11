@@ -9,6 +9,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   width: 70%;
+  max-width: 80rem;
   height: 15rem;
   margin: 4rem auto 2rem auto; }
 
@@ -39,8 +40,8 @@
 
 .form-container {
   background-color: transparent;
-  height: 40%;
-  width: 20%;
+  height: 50rem;
+  width: 60rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -80,8 +81,8 @@
 
 @media screen and (max-width: 1000px) {
   .form-container {
-    width: 80%;
-    height: 50%; } }
+    width: 75%;
+    height: 45%; } }
 
 .navbar {
   width: 100%;
@@ -105,9 +106,13 @@
 
 @media screen and (max-width: 1000px) {
   .navbar__list-item {
-    font-size: 2.8rem;
+    font-size: 3rem;
     margin: .5rem 1rem;
-    padding: 0; } }
+    padding: .5rem; } }
+
+@media screen and (max-width: 340px) {
+  .navbar__list-item {
+    font-size: 2.5rem; } }
 
 body {
   background-color: #93c9ff; }
@@ -172,7 +177,6 @@ body {
       font-size: 2.5rem;
       width: 20%;
       max-width: 30rem;
-      height: 4rem;
       margin: .5rem auto;
       color: #464545;
       background-color: transparent;
@@ -191,4 +195,22 @@ body {
   .total__message-btn {
     width: 40%; }
   .button-container {
-    width: 100%; } }
+    width: 100%; }
+  .buttons {
+    height: 9rem;
+    width: 9rem; }
+  .total__message-btn {
+    min-width: 20rem; } }
+
+@media screen and (max-width: 340px) {
+  .timer {
+    height: 25rem;
+    width: 25rem; }
+  .button-container {
+    width: 100%; }
+  .buttons {
+    height: 8rem;
+    width: 8rem;
+    font-size: 2rem; }
+  .total__message-btn {
+    width: 70%; } }

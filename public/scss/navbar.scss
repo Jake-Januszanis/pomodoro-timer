@@ -32,9 +32,17 @@
     .navbar {
 
         &__list-item {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin: .5rem 1rem;
-            padding: 0;
+            padding: .5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .navbar {
+        &__list-item {
+            font-size: 2.5rem;
         }
     }
 }

@@ -1,7 +1,7 @@
 .form-container {
   background-color: transparent;
-  height: 40%;
-  width: 20%;
+  height: 50rem;
+  width: 60rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -41,5 +41,5 @@
 
 @media screen and (max-width: 1000px) {
   .form-container {
-    width: 80%;
-    height: 50%; } }
+    width: 75%;
+    height: 45%; } }
