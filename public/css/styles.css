@@ -1,98 +1,41 @@
-body {
-  background-color: #93c9ff; }
-
-.navbar {
-  width: 100%;
-  height: 5rem;
-  background-color: #fbfbfb; }
-  .navbar__list {
-    height: 100%;
-    margin: 0;
-    padding: 0; }
-    .navbar__list-item {
-      display: inline-block;
-      height: 100%;
-      font-size: 3rem;
-      margin: 0rem 2rem 0 2rem;
-      padding: 1rem  1.5rem 0 1.5rem;
-      color: #222;
-      text-decoration: none; }
-      .navbar__list-item:hover {
-        background-color: rgba(172, 169, 169, 0.589);
-        cursor: pointer; }
-
-.timer {
-  margin: 5rem auto 3rem auto;
-  border: #464545 solid 20px;
-  width: 35rem;
-  height: 35rem;
-  border-radius: 50%; }
-  .timer__display {
-    text-align: center;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 8rem;
-    color: #464545; }
-
-.button-container {
-  width: 25%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center; }
-
-.buttons {
-  text-align: center;
-  font-weight: bold;
-  height: 8rem;
-  width: 8rem;
-  border-radius: 50%;
-  margin: 1rem 2rem;
-  color: #464545;
-  background-color: transparent;
-  font-size: 2rem;
-  border: #464545 3px solid;
-  cursor: pointer;
-  outline: none;
-  transition: 1s ease; }
-  .buttons:hover {
-    transform: scale(1.2);
-    transition: 1s ease; }
-
 #reset-btn {
   display: block;
   margin: 0 auto;
   margin-top: 2rem; }
 
-.total {
+.data-display {
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  color: #464545; }
-  .total__icons {
-    font-size: 14rem;
-    text-align: center;
-    line-height: 5rem;
-    margin-top: 5rem; }
-  .total__message {
-    text-align: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 70%;
+  height: 15rem;
+  margin: 4rem auto 2rem auto; }
+
+.data__cards {
+  text-align: center;
+  border: 3px solid #464545;
+  margin-top: 2rem;
+  width: 17rem;
+  background-color: floralwhite;
+  color: #464545;
+  border-radius: 15px;
+  transition: 1s ease-in-out;
+  box-shadow: 5px 10px 18px #888888; }
+  .data__cards:hover {
+    transform: scale(1.1);
+    transition: .8s ease-in-out; }
+  .data__cards-text {
+    display: block;
+    margin: 1rem .5rem;
     font-size: 3rem; }
-    .total__message-btn {
-      text-align: center;
-      font-size: 2rem;
-      width: 20%;
-      margin: .5rem auto;
-      color: #464545;
-      background-color: transparent;
-      height: 5rem;
-      border-radius: 10px;
-      border: #464545 solid 2px;
-      outline: none;
-      cursor: pointer; }
+    .data__cards-text-sm {
+      font-size: 2.5rem;
+      font-weight: lighter; }
+    .data__cards-text-lrg {
+      font-size: 4rem;
+      font-weight: bold;
+      display: block; }
 
 .form-container {
   background-color: transparent;
@@ -135,41 +78,117 @@ body {
     color: #fbfbfb;
     border: 1px transparent solid; }
 
-.data-display {
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 95%;
-  height: 15rem;
-  margin: 4rem auto 2rem auto; }
-
-.data__cards {
-  text-align: center;
-  border: 3px solid #464545;
-  margin-top: 2rem;
-  width: 17rem;
-  background-color: transparent;
-  color: #464545;
-  border-radius: 15px;
-  transition: 1s ease-in-out;
-  box-shadow: 5px 10px 18px #888888; }
-  .data__cards:hover {
-    transform: scale(1.1);
-    transition: .8s ease-in-out; }
-  .data__cards-text {
-    display: block;
-    margin: 1rem .5rem;
-    font-size: 3rem; }
-    .data__cards-text-sm {
-      font-size: 2.5rem;
-      font-weight: lighter; }
-    .data__cards-text-lrg {
-      font-size: 4rem;
-      font-weight: bold;
-      display: block; }
-
-@media all and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .form-container {
-    width: 60%;
+    width: 80%;
     height: 50%; } }
+
+.navbar {
+  width: 100%;
+  height: 6rem;
+  background-color: floralwhite; }
+  .navbar__list {
+    height: 100%;
+    margin: 0;
+    padding: 0; }
+    .navbar__list-item {
+      display: inline-block;
+      height: 100%;
+      font-size: 3.5rem;
+      margin: 0 2rem 1rem 2rem;
+      padding: 1rem  1.5rem;
+      color: #222;
+      text-decoration: none; }
+      .navbar__list-item:hover {
+        background-color: rgba(172, 169, 169, 0.589);
+        cursor: pointer; }
+
+@media screen and (max-width: 1000px) {
+  .navbar__list-item {
+    font-size: 2.8rem;
+    margin: .5rem 1rem;
+    padding: 0; } }
+
+body {
+  background-color: #93c9ff; }
+
+.timer {
+  margin: 5rem auto 3rem auto;
+  border: #464545 solid 10px;
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%; }
+  .timer__display {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+    color: #464545; }
+
+.button-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center; }
+
+.buttons {
+  text-align: center;
+  font-weight: bold;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  margin: 1rem 2rem;
+  color: #464545;
+  background-color: transparent;
+  font-size: 2rem;
+  border: #464545 3px solid;
+  cursor: pointer;
+  outline: none;
+  transition: 1s ease; }
+  .buttons:hover {
+    transform: scale(1.2);
+    transition: 1s ease; }
+
+.total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  color: #464545; }
+  .total__icons {
+    font-size: 14rem;
+    text-align: center;
+    line-height: 5rem;
+    margin-top: 5rem; }
+  .total__message {
+    text-align: center;
+    font-size: 3rem; }
+    .total__message-btn {
+      text-align: center;
+      font-size: 2.5rem;
+      width: 20%;
+      max-width: 30rem;
+      height: 4rem;
+      margin: .5rem auto;
+      color: #464545;
+      background-color: transparent;
+      height: 5rem;
+      border-radius: 10px;
+      border: #464545 solid 2px;
+      outline: none;
+      cursor: pointer; }
+
+@media screen and (max-width: 1000px) {
+  .timer {
+    height: 30rem;
+    width: 30rem; }
+    .timer__display {
+      font-size: 6rem; }
+  .total__message-btn {
+    width: 40%; }
+  .button-container {
+    width: 100%; } }

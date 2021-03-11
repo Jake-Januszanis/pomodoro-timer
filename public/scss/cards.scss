@@ -1,0 +1,50 @@
+
+    @import 'variables.scss';
+
+
+    .data {
+
+        &-display {
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 70%;
+            height: 15rem;
+            margin: 4rem auto 2rem auto;
+        }
+
+        &__cards {
+            text-align: center;
+            border: 3px solid $black;
+            margin-top: 2rem;
+            width: 17rem;
+            background-color: floralwhite;
+            color: $black;
+            border-radius: 15px;
+            transition: 1s ease-in-out;
+            box-shadow: 5px 10px 18px #888888;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: .8s ease-in-out
+            }
+
+            &-text {
+                display: block;
+                margin: 1rem .5rem;
+                font-size: 3rem;
+
+                &-sm {
+                    font-size: 2.5rem;
+                    font-weight: lighter;
+                }
+
+                &-lrg {
+                    font-size: 4rem;
+                    font-weight: bold;
+                    display: block;
+                }
+            }
+        }
+    }
