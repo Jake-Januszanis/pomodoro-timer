@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const session = require('client-sessions')
 const mongoose = require('mongoose')
 require('dotenv').config();
+const port = process.env.PORT;
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -48,6 +49,6 @@ app.get('/register', (req, res) => {
 })
 
 
-app.listen(4000, () => {
-    console.log('App is listening on port 4000')
+app.listen(port, () => {
+    console.log(`App is listening on port ${port}`)
 })
