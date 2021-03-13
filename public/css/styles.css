@@ -115,7 +115,8 @@
     font-size: 2.5rem; } }
 
 body {
-  background-color: #93c9ff; }
+  background-color: #93c9ff;
+  overflow: auto; }
 
 .timer {
   margin: 5rem auto 3rem auto;
