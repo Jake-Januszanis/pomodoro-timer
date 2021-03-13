@@ -19,7 +19,7 @@ app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'));
 
 //Connect to DB
-const db = mongoose.connect(process.env.DB_CONNECT,
+const db = mongoose.connect(process.env.DB_CONNECT || DB_CONNECT,
     {useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
