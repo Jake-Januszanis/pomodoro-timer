@@ -6,17 +6,19 @@
 .data-display {
   text-align: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 1.5rem;
   flex-wrap: wrap;
   width: 70%;
   max-width: 80rem;
   height: 15rem;
-  margin: 4rem auto 2rem auto; }
+  margin: 0 auto;
+  padding-top: 3rem; }
 
 .data__cards {
   text-align: center;
   border: 3px solid #464545;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   width: 17rem;
   background-color: floralwhite;
   color: #464545;
@@ -37,6 +39,12 @@
       font-size: 4rem;
       font-weight: bold;
       display: block; }
+
+@media screen and (max-width: 1200px) {
+  .data-display {
+    width: 90%; }
+  .data__cards {
+    width: 13.5rem; } }
 
 .form-container {
   background-color: transparent;
