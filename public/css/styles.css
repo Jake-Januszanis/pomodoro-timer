@@ -79,10 +79,12 @@
     color: #fbfbfb;
     border: 1px transparent solid; }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .form-container {
     width: 75%;
-    height: 45%; } }
+    height: 45%;
+    min-width: 700px;
+    min-height: 650px; } }
 
 .navbar {
   width: 100%;
