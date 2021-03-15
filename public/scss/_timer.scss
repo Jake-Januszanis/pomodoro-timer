@@ -1,9 +1,14 @@
 
 @import 'variables.scss';
 
+html {
+    height: 100%;
+}
+
 body {
     background-color: #93c9ff;
     overflow: auto;
+    height: 100%;
 }
 
 
