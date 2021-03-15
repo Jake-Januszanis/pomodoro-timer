@@ -82,7 +82,10 @@
 @media screen and (max-width: 1200px) {
   .form-container {
     width: 85%;
-    height: 75%; } }
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem; } }
 
 .navbar {
   width: 100%;
