@@ -1,40 +1,38 @@
 @import 'variables.scss';
 
 .form-container {
-    background-color: transparent;
-    height: 50rem;
+    height: 55rem;
     width: 60rem;
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -20%);
     border-radius: 5px;
-    border: 3px solid $black;
+    border: 2px solid $black;
 
     &__title {
         text-align: center;
         font-size: 4rem;
         color:rgba(59, 59, 59, 0.884);
-        margin-top: 5rem;
-        margin-bottom: 1rem;;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
 }
 
 .reg-form {
     display: flex;
     flex-direction: column;
+    gap: 3rem;
     
     &__input {
         height: 5rem;
         width: 70%;
-        margin: 2rem auto;
+        margin: 0 auto;
         border-radius: 7px;
         background-color: rgb(223, 222, 222);
         font-size: 2.5rem;
         border: 1px transparent solid;
-        outline: none;
-        padding-left: 1.5rem;
-        
+        padding-left: 2rem;
     }
 
     &__btn {
@@ -50,19 +48,17 @@
     }
 }
 
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
 
     .form-container {
         width: 85%;
         height: 75%;
-        display: flex;
-        flex-direction: column;
         margin-top: 6rem;
         overflow: auto;
 
         &__title {
-            margin-top: 2rem;
+            padding-top: 5rem;
         }
+
     }
 }

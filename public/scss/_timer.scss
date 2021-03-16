@@ -13,8 +13,8 @@ body {
 
 
 .timer {
-    margin: 5rem auto 3rem auto;
-    border: $black solid 10px;
+    margin: 5rem auto;
+    border: $black solid 6px;
     width: 35rem;
     height: 35rem;
     border-radius: 50%;
@@ -27,36 +27,6 @@ body {
         transform: translate(-50%, -50%);
         font-size: 8rem;
         color: $black;
-    }
-}
-
-.button-container {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-
-.buttons {
-    text-align: center;
-    font-weight: bold;
-    height: 10rem;
-    width: 10rem;
-    border-radius: 50%;
-    margin: 1rem 2rem;
-    color: $black;
-    background-color: transparent;
-    font-size: 2rem;
-    border: $black 3px solid;
-    cursor: pointer;
-    outline: none;
-    transition: 1s ease;
-
-    &:hover {
-        transform: scale(1.2);
-        transition: 1s ease;
     }
 }
 
@@ -78,22 +48,7 @@ body {
     &__message {
         text-align: center;
         font-size: 3rem;
-
-        &-btn {
-            text-align: center;
-            font-size: 2.5rem;
-            width: 20%;
-            max-width: 30rem;
-            margin: .5rem auto;
-            color: $black;
-            background-color: transparent;
-            height: 5rem;
-            border-radius: 10px;
-            border: $black solid 2px;
-            outline: none;
-            cursor: pointer;
-        }
-
+        padding-bottom: 2rem;
     }
 }
 
@@ -108,44 +63,12 @@ body {
             font-size: 6rem;
         }
     }
-
-    .total {
-        &__message-btn {
-            width: 40%;
-        }
-    }
-
-    .button-container {
-        width: 100%;
-    }
-    .buttons {
-        height: 9rem;
-        width: 9rem;
-    }
-
-    .total__message-btn {
-        min-width: 20rem;
-    }
 }
 
 @media screen and (max-width: 340px) {
-
+    
     .timer {
         height: 25rem;
         width: 25rem;
-    }
-
-    .button-container {
-        width: 100%;
-    }
-
-    .buttons {
-        height: 8rem;
-        width: 8rem;
-        font-size: 2rem;
-    }
-
-    .total__message-btn {
-        width: 70%;
     }
 }

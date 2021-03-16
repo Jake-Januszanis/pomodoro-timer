@@ -5,25 +5,20 @@
     .data {
 
         &-display {
-            text-align: center;
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 2.5rem 3rem;
             flex-wrap: wrap;
-            width: 70%;
             max-width: 80rem;
-            height: 15rem;
             margin: 0 auto;
-            padding-top: 3rem;
+            padding-top: 4rem;
         }
 
         &__cards {
-            text-align: center;
-            border: 3px solid $black;
-            margin-top: 1.5rem;
-            width: 17rem;
             background-color: floralwhite;
             color: $black;
+            width: 17rem;
+            text-align: center;
             border-radius: 15px;
             transition: 1s ease-in-out;
             box-shadow: 5px 10px 18px #888888;
@@ -35,12 +30,13 @@
 
             &-text {
                 display: block;
-                margin: 1rem .5rem;
+                margin: .5rem;
                 font-size: 3rem;
 
                 &-sm {
-                    font-size: 2.5rem;
+                    font-size: 2.2rem;
                     font-weight: lighter;
+                    padding-bottom: .8rem;
                 }
 
                 &-lrg {
@@ -52,11 +48,12 @@
         }
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1000px) {
         .data {
 
             &-display {
                 width: 90%;
+                gap: 2.5rem 1rem;
             }
 
             &__cards {
