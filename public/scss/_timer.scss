@@ -1,5 +1,4 @@
-
-@import 'variables.scss';
+@import 'variables';
 
 html {
     height: 100%;
@@ -10,6 +9,7 @@ body {
     overflow: auto;
     height: 100%;
 }
+
 
 
 .timer {
